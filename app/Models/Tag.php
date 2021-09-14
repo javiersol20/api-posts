@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Traits\ApiTraits;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    use HasFactory;
+    use HasFactory, ApiTraits;
 
     public function posts()
     {
