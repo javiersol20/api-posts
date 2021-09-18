@@ -27,5 +27,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Passport::routes();
+        # asigno la cantidad de segundos que quiero que expire este token
+        Passport::tokensExpireIn(now()->addSecond(60));
     }
 }

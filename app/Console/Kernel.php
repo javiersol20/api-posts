@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+         $schedule->command('passport:purge')->everyMinute();
     }
 
     /**
@@ -32,6 +32,8 @@ class Kernel extends ConsoleKernel
      *
      * @return void
      */
+
+
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
